@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link  rel="icon"   href="favicon.png" type="image/png" />
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid?styles=24573" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">            
+    <title>Pokédex</title>
+  </head>
+  <body>
+      <div class="container mt-3">
+          <h1 class="mb-5 text-center">Pokédex</h1>
+          
+          <div id="pokedex" class="row"></div>
+        <button id="getMorePokemons" class="btn btn-light mt-3 mb-3 ml-auto" data-next="">¡Quiero ver más Pokémon!</button>
+        </div>
+          
+          <!-- Pokemon Types Modal -->
+          <div class="modal fade" id="modalPokemon" tabindex="-1" role="dialog" aria-labelledby="modalPokemonLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalPokemonLabel"></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p class="ml-2"><strong class="title">Type: </strong><span id="pokemonType"></span></p>
+                  <p class="ml-2"><strong class="title">Generations: </strong><span id="pokemonGenerations"></span></p>
+                  <p class="ml-2"><strong class="title">Abilities: </strong><span id="pokemonAbilities"></span></p>
+                  <p class="ml-2"><strong class="title">Top 5 Moves: </strong><span id="pokemonMoves"></span></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Damage Relations Modal -->
+          <div class="modal fade" id="modalPokemonDamageRelation" tabindex="-1" role="dialog" aria-labelledby="modalPokemonDamageRelationLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p class="ml-2"><strong class="title">Débil contra (le causan mucho daño):</strong><span id="double_damage_from"></span></p>
+                  <p class="ml-2"><strong class="title">Fuerte contra (les hace mucho daño): </strong><span id="double_damage_to"></span></p>
+                  <p class="ml-2"><strong class="title">Le causan daño medio: </strong><span id="half_damage_from"></span></p>
+                  <p class="ml-2"><strong class="title">Les hace daño medio a: </strong><span id="half_damage_to"></span></p>
+                  <p class="ml-2"><strong class="title">No le causan ningún daño: </strong><span id="no_damage_from"></span></p>
+                  <p class="ml-2"><strong class="title">No causa daño contra tipo: </strong><span id="no_damage_to"></span></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Pokemon Abilities Modal -->
+          <div class="modal fade" id="modalPokemonAbility" tabindex="-1" role="dialog" aria-labelledby="modalPokemonAbilityLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalPokemonAbilityLabel"></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p class="ml-2"><strong class="title">Otros Pokémon que tienen esta habilidad:  </strong><span id="other-pokemons"></span></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    </body>
+</html>
+
+

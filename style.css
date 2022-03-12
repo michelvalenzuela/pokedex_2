@@ -1,0 +1,81 @@
+body {
+    background: linear-gradient(to right, #3521ed, #3d1e93);
+}
+
+
+h1 {
+    font-family: 'Pokemon Solid', sans-serif;
+    font-weight: 300;
+    color: yellow;
+    -webkit-text-stroke: 2px black;
+}
+
+.btn {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.btnGetDataPokemon {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+.btnGetDataPokemon:hover {
+    background-color: rgb(116, 227, 255);
+}
+
+.w-100 {
+    height: 120px;
+}
+
+.modal-content {
+    background: linear-gradient(to right, #04be70, #05aab6);
+    border: 1px solid #f5a004;
+}
+
+#modalPokemonDamageRelation .modal-content {
+    background: linear-gradient(to right, #086e36, #04993d);
+    border: 1px solid #0a0000;
+}
+
+#modalPokemonDamageRelation li {
+    list-style-image: url('pokeball\(1\).png');
+}
+
+#modalPokemonAbility .modal-content {
+    background: linear-gradient(to right, #e7a8a8, #e95151);
+    border: 1px solid #f50404;
+
+}
+
+#modalPokemonAbility li {
+    list-style-image: url('friend-ball.png');
+}
+
+.card-title {
+    font-family: 'Stick No Bills', sans-serif;
+}
+
+.modal-title {
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 23px;
+}
+
+.modal-body p {
+    font-family: 'Lato', sans-serif;
+}
+
+.title {
+    font-family: 'Quicksand', sans-serif;
+}
+
+@media screen and (max-width:768px) {
+
+    .container {
+        max-width:100%;
+        width: 100%;
+    }
+    .col-3{
+        width:100%;
+        float:left;
+        margin:0;
+    }
+    }
