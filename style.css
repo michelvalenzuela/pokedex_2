@@ -36,19 +36,13 @@ h1 {
     border: 1px solid #0a0000;
 }
 
-#modalPokemonDamageRelation li {
-    list-style-image: url('pokeball\(1\).png');
-}
 
 #modalPokemonAbility .modal-content {
-    background: linear-gradient(to right, #e7a8a8, #e95151);
-    border: 1px solid #f50404;
+    background: linear-gradient(to right, #086e36, #04993d);
+    border: 1px solid #000000;
 
 }
 
-#modalPokemonAbility li {
-    list-style-image: url('friend-ball.png');
-}
 
 .card-title {
     font-family: 'Stick No Bills', sans-serif;
